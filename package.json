@@ -2,7 +2,7 @@
   "name": "commune",
   "version": "1.0.0",
   "description": "An online community for users to share the gifts of friendship, service, involement, and time.",
-  "main": "/src/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_PATH=src node src/index.js",
