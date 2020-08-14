@@ -1,30 +1,45 @@
 {
-  "name": "commune",
+  "name": "server",
   "version": "1.0.0",
-  "description": "An online community for users to share the gifts of friendship, service, involement, and time.",
-  "main": "src/index.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_PATH=src node src/index.js",
-    "watch": "cross-env NODE_PATH=src nodemon"
+    "start": "per-env",
+    "start:development": "nodemon -r dotenv/config ./bin/www",
+    "start:production": "node ./bin/www"
   },
-  "keywords": [
-    "koa",
-    "postgres",
-    "commune",
-    "knex"
-  ],
-  "author": "Kristen Chauncey <kristen.michelle82@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaunceykm/commune-server.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaunceykm/commune-server/issues"
+  },
+  "homepage": "https://github.com/chaunceykm/commune-server#readme",
   "dependencies": {
-    "cross-env": "^7.0.2",
-    "enforce-node-path": "^1.0.0",
-    "knex": "^0.21.4",
-    "koa": "^2.13.0"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-bearer-token": "^2.4.0",
+    "express-validator": "^6.6.1",
+    "frisby": "^2.1.2",
+    "jest": "^26.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "per-env": "^1.0.2",
+    "pg": "^8.3.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
-    "chai-http": "^3.0.0",
-    "jest": "^26.3.0",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^3.2.0",
+    "faker": "^4.1.0",
     "nodemon": "^2.0.4"
   }
 }
